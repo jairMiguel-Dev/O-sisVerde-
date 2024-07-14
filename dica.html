@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicas da Oásis Verde</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assent/CSS/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    /* Estilos gerais */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr; /* Layout de uma coluna em telas menores */
+    }
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    background: rgba(0, 0, 0, 0.048);
+    border-bottom: 1px solid rgba(12, 11, 9, 0.6);
+    transition: all 0.5s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    top: -151px; /* Ajuste o valor conforme necessário */
+    position: relative; /* Garanta que position seja definido como relative ou absolute */
+    z-index: 1; /* Garante que o texto esteja acima da camada de sombra */
+}
+
+
+.header .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.header .navbar-nav .nav-link {
+    color: #f0f0f0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.header .navbar-nav .nav-link:hover {
+    color: #163501;
+}
+
+
+#banner {
+    background: url('/floricultura/assent/Imagens/fundo-banner.avif');
+    background-size: cover; /* Cobrir todo o elemento */
+    background-position: center; /* Centralizar a imagem */
+    color: #fff;
+    padding: 200px 0; /* Espaçamento interno superior e inferior */
+    box-shadow: 0 10px 20px rgba(15, 15, 15, 0.267); /* Sombra */
+    border-radius: 10vh;
+}
+
+#banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 87.99%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor da sombra escura */
+    mix-blend-mode: multiply; /* Modo de mesclagem para aplicar a sombra */
+    border-radius: 10vh;
+}
+
+#banner h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    z-index: 1; /* Garante que o texto esteja acima da camada de sombra */
+}
+
+#banner p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    position: relative;
+    z-index: 1; /* Garante que o texto esteja acima da camada de sombra */
+}
+/* Estilos para as seções */
+.faq-section {
+         max-width: 800px;
+         width: 100%;
+         background-color: #fff;
+         border-radius: 10px;
+         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+         padding: 40px;
+         margin: 7vh 10vh 10vh 47vh;
+      }
+
+      .faq-section h2 {
+         font-family: 'Playfair Display', serif;
+         font-size: 36px;
+         color: #4CAF50;
+         text-align: center;
+         margin-bottom: 40px;
+      }
+
+      .faq-item {
+         border-bottom: 1px solid #ddd;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+         padding: 20px 0;
+      }
+
+      .faq-item:hover {
+         background-color: #f9f9f9;
+      }
+
+      .faq-item:last-child {
+         border-bottom: none;
+      }
+
+      .answer {
+         display: none;
+         padding-top: 20px;
+         color: #555;
+      }
+
+      .answer.active {
+         display: block;
+      }
+
+      .faq-item .question-icon {
+         margin-right: 10px;
+         font-size: 24px;
+         vertical-align: middle;
+      }
+
+      .faq-item .question-text {
+         font-size: 18px;
+         vertical-align: middle;
+      }
+
+     /* Estilos para o footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+/* Estilos para a seção de contato */
+#contato {
+    padding: 50px 0;
+    background-color: #333;
+}
+
+#contato h2 {
+    color: #333;
+}
+
+#contato p {
+    text-align: center;
+    color: #333;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#contact-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+#contact-form .form-control {
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    border-radius: 23vh;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+#contact-form .form-control:focus {
+    background-color: #e9ecef;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#contact-form button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para o contêiner do mapa */
+.map-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Estilos para redes sociais */
+.social-media {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.social-link {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    color: #007bff;
+}
+
+/* Estilos para a seção de mapa de localização */
+.mapa-localizacao {
+    background-color: #343a40;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.mapa-localizacao h2 {
+    color: #fff;
+}
+
+/* Estilos para o texto de direitos autorais */
+.footer p {
+    margin-bottom: 0;
+}
+
+/* Animações para o formulário de contato */
+@keyframes entrada-formulario {
+    0% { transform: translateY(-20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+#contact-form {
+    animation: entrada-formulario 0.5s ease-out;
+}
+
+@keyframes saida-formulario {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-20px); opacity: 0; }
+}
+
+#contact-form.exited {
+    animation: saida-formulario 0.5s ease-out;
+}
+</style>
+</head>
+<body>
+    <main>
+        <!--Banner-->
+        <section id="banner">
+            <header class="header">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="index.html">Dicas da Oásis Verde</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="sobre.html">Sobre</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <div class="container text-center">
+                <h1>Tem Dúvida sobre algo?</h1>
+                <p>Nesta página listamos uma serie de perguntas e resposta para você</p>
+            </div>
+        </section>
+        <!--Banner End-->
+
+
+        <!-- Question -->
+        <div class="faq-section">
+            <h2>Dúvidas Frequentes sobre Suculentas e Cactos</h2>
+            <div class="faq-item" onclick="toggleAnswer(1)">
+               <span class="question-icon">?</span>
+               <span class="question-text">Como regar corretamente as suculentas?</span>
+               <div class="answer" id="answer1">
+                  Regue suas suculentas de forma moderada, permitindo que o solo seque completamente entre as regas.
+               </div>
+            </div>
+      
+            <div class="faq-item" onclick="toggleAnswer(2)">
+               <span class="question-icon">?</span>
+               <span class="question-text">Qual a melhor iluminação para cactos?</span>
+               <div class="answer" id="answer2">
+                  Os cactos preferem luz solar direta e intensa. Coloque-os em locais bem iluminados.
+               </div>
+            </div>
+      
+            <div class="faq-item" onclick="toggleAnswer(3)">
+               <span class="question-icon">?</span>
+               <span class="question-text">Como identificar problemas de crescimento nas suculentas?</span>
+               <div class="answer" id="answer3">
+                  Problemas comuns incluem folhas amareladas ou murchas, que podem indicar falta ou excesso de água.
+               </div>
+            </div>
+      
+            <div class="faq-item" onclick="toggleAnswer(4)">
+               <span class="question-icon">?</span>
+               <span class="question-text">É possível plantar suculentas e cactos juntos?</span>
+               <div class="answer" id="answer4">
+                  Sim, desde que ambos tenham necessidades semelhantes de água e luz.
+               </div>
+            </div>
+      
+            <div class="faq-item" onclick="toggleAnswer(5)">
+               <span class="question-icon">?</span>
+               <span class="question-text">Quais são os melhores fertilizantes para suculentas?</span>
+               <div class="answer" id="answer5">
+                  Use fertilizantes diluídos e específicos para suculentas, aplicados durante a estação de crescimento.
+               </div>
+            </div>
+      
+            <!-- Novas perguntas e respostas -->
+            <div class="faq-item" onclick="toggleAnswer(6)">
+               <span class="question-icon">?</span>
+               <span class="question-text">Como propagar suculentas?</span>
+               <div class="answer" id="answer6">
+                  Propague suculentas por folhas ou estacas, deixando-as secar antes de replantar em solo úmido.
+               </div>
+            </div>
+      
+            <div class="faq-item" onclick="toggleAnswer(7)">
+               <span class="question-icon">?</span>
+               <span class="question-text">Qual a temperatura ideal para suculentas e cactos?</span>
+               <div class="answer" id="answer7">
+                  A maioria das suculentas e cactos prefere temperaturas entre 15°C e 30°C, evitando extremos de calor ou frio.
+               </div>
+            </div>
+      
+            <div class="faq-item" onclick="toggleAnswer(8)">
+               <span class="question-icon">?</span>
+               <span class="question-text">Como prevenir pragas em suculentas?</span>
+               <div class="answer" id="answer8">
+                  Mantenha as suculentas limpas e livre de detritos, verifique regularmente por sinais de pragas e trate com pesticidas naturais, se necessário.
+               </div>
+            </div>
+      
+            <div class="faq-item" onclick="toggleAnswer(9)">
+               <span class="question-icon">?</span>
+               <span class="question-text">É possível cultivar suculentas em ambientes internos?</span>
+               <div class="answer" id="answer9">
+                  Sim, muitas suculentas se adaptam bem a ambientes internos, desde que recebam luz solar suficiente.
+               </div>
+            </div>
+      
+            <div class="faq-item" onclick="toggleAnswer(10)">
+               <span class="question-icon">?</span>
+               <span class="question-text">Quando e como podar suculentas?</span>
+               <div class="answer" id="answer10">
+                  Pode suculentas na primavera, cortando as folhas ou brotos excessivamente longos para incentivar o crescimento compacto.
+               </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(1)">
+                <span class="question-icon">?</span>
+                <span class="question-text">Quais são os tipos de solo ideais para suculentas?</span>
+                <div class="answer" id="answer1">
+                   Suculentas preferem solos bem drenados, como uma mistura de terra para cactos, areia grossa e perlita.
+                </div>
+             </div>
+       
+             <div class="faq-item" onclick="toggleAnswer(2)">
+                <span class="question-icon">?</span>
+                <span class="question-text">Como saber se minha suculenta está recebendo a quantidade certa de luz?</span>
+                <div class="answer" id="answer2">
+                   Folhas suculentas devem estar firmes e coloridas. Folhas esticadas ou descoloridas podem indicar luz insuficiente ou excessiva.
+                </div>
+             </div>
+       
+             <div class="faq-item" onclick="toggleAnswer(3)">
+                <span class="question-icon">?</span>
+                <span class="question-text">Quais são os melhores métodos de propagação para suculentas raras?</span>
+                <div class="answer" id="answer3">
+                   Suculentas raras podem ser propagadas por folhas ou estacas, mas muitas vezes requerem cuidados específicos devido à sua natureza delicada.
+                </div>
+             </div>
+       
+             <div class="faq-item" onclick="toggleAnswer(4)">
+                <span class="question-icon">?</span>
+                <span class="question-text">Como proteger suculentas contra temperaturas extremas?</span>
+                <div class="answer" id="answer4">
+                   Use proteção como coberturas de agulha de pinheiro ou telas para proteger suculentas de geadas ou calor intenso.
+                </div>
+             </div>
+       
+             <div class="faq-item" onclick="toggleAnswer(5)">
+                <span class="question-icon">?</span>
+                <span class="question-text">Quais são os sinais de superlotação em vasos de suculentas?</span>
+                <div class="answer" id="answer5">
+                   Raízes aparecendo na superfície do solo, crescimento lento ou folhas murchas podem indicar que as suculentas precisam de um vaso maior.
+                </div>
+             </div>
+       
+             <div class="faq-item" onclick="toggleAnswer(6)">
+                <span class="question-icon">?</span>
+                <span class="question-text">Quais são as melhores suculentas para iniciantes?</span>
+                <div class="answer" id="answer6">
+                   Suculentas como Echeverias, Haworthias e Sedums são ótimas para iniciantes devido à sua resistência e facilidade de cuidado.
+                </div>
+             </div>
+       
+             <div class="faq-item" onclick="toggleAnswer(7)">
+                <span class="question-icon">?</span>
+                <span class="question-text">Como resolver problemas de apodrecimento das raízes em suculentas?</span>
+                <div class="answer" id="answer7">
+                   Remova suavemente as suculentas do solo, corte raízes apodrecidas e deixe secar antes de replantar em solo seco e novo.
+                </div>
+             </div>
+       
+             <div class="faq-item" onclick="toggleAnswer(8)">
+                <span class="question-icon">?</span>
+                <span class="question-text">Como acelerar o crescimento das suculentas?</span>
+                <div class="answer" id="answer8">
+                   Fornecer luz solar adequada, regar moderadamente e aplicar fertilizante diluído durante a estação de crescimento pode promover um crescimento mais rápido.
+                </div>
+             </div>
+       
+             <div class="faq-item" onclick="toggleAnswer(9)">
+                <span class="question-icon">?</span>
+                <span class="question-text">Como identificar e tratar doenças comuns em cactos?</span>
+                <div class="answer" id="answer9">
+                   Manchas pretas ou podridão mole podem indicar podridão de cactos. Remova áreas afetadas e replante em solo seco e saudável.
+                </div>
+             </div>
+       
+             <div class="faq-item" onclick="toggleAnswer(10)">
+                <span class="question-icon">?</span>
+                <span class="question-text">É possível cultivar suculentas em terrários fechados?</span>
+                <div class="answer" id="answer10">
+                   Sim, suculentas podem prosperar em terrários fechados, desde que haja ventilação adequada e luz suficiente.
+                </div>
+             </div>
+       
+             <div class="faq-item" onclick="toggleAnswer(11)">
+                <span class="question-icon">?</span>
+                <span class="question-text">Quais são as suculentas mais adequadas para jardins verticais?</span>
+                <div class="answer" id="answer11">
+                   Suculentas pendentes como Senecio rowleyanus (colar-de-pérolas) e Sedum morganianum (rabo-de-burro) são ideais para jardins verticais devido ao seu crescimento cascata.
+                </div>
+             </div>
+       
+             <div class="faq-item" onclick="toggleAnswer(12)">
+                <span class="question-icon">?</span>
+                <span class="question-text">Como evitar problemas de enraizamento em suculentas?</span>
+                <div class="answer" id="answer12">
+                   Use vasos com boa drenagem, evite regar em excesso e mantenha as folhas secas para prevenir problemas de fungos.
+                </div>
+             </div>
+       
+             <div class="faq-item" onclick="toggleAnswer(13)">
+                <span class="question-icon">?</span>
+                <span class="question-text">Quais são os melhores cuidados para suculentas durante o inverno?</span>
+                <div class="answer" id="answer13">
+                   Reduza a rega e proteja as suculentas do frio intenso usando coberturas ou movendo-as para locais protegidos.
+                </div>
+             </div>
+       
+             <div class="faq-item" onclick="toggleAnswer(14)">
+                <span class="question-icon">?</span>
+                <span class="question-text">É necessário fertilizar suculentas durante o inverno?</span>
+                <div class="answer" id="answer14">
+                   Não é necessário fertilizar suculentas durante o inverno, pois muitas entram em estado de dormência.
+                </div>
+             </div>
+       
+             <div class="faq-item" onclick="toggleAnswer(15)">
+                <span class="question-icon">?</span>
+                <span class="question-text">Como remover manchas brancas das folhas de suculentas?</span>
+                <div class="answer" id="answer15">
+                   As manchas brancas podem ser depósitos minerais de água dura. Limpe as folhas com água morna e um pano macio.
+                </div>
+             </div>
+       
+             <div class="faq-item" onclick="toggleAnswer(16)">
+                <span class="question-icon">?</span>
+                <span class="question-text">Quais são os sinais de estresse em suculentas?</span>
+                <div class="answer" id="answer16">
+                   Folhas murchas, mudança na cor das folhas ou crescimento irregular podem indicar estresse devido a falta de água, luz ou condições inadequadas.
+                </div>
+             </div>
+       
+             <div class="faq-item" onclick="toggleAnswer(17)">
+                <span class="question-icon">?</span>
+                <span class="question-text">Como replantar suculentas sem danificar as raízes?</span>
+                <div class="answer" id="answer17">
+                   Use uma ferramenta afiada e limpa para cortar com cuidado o solo ao redor das raízes, mantendo o torrão de raiz intacto durante o transplante.
+                </div>
+             </div>
+       
+             <div class="faq-item" onclick="toggleAnswer(18)">
+                <span class="question-icon">?</span>
+                <span class="question-text">Quais são as suculentas mais indicadas para climas muito quentes?</span>
+                <div class="answer" id="answer18">
+                   Suculentas como Euphorbias, Agaves e Opuntias são resistentes ao calor e podem prosperar em climas quentes e secos.
+                </div>
+             </div>
+       
+             <div class="faq-item" onclick="toggleAnswer(19)">
+                <span class="question-icon">?</span>
+                <span class="question-text">Como recuperar suculentas após uma geada severa?</span>
+                <div class="answer" id="answer19">
+                   Remova partes danificadas, permita que as plantas se recuperem naturalmente e proteja-as contra futuras geadas.
+                </div>
+             </div>
+       
+             <div class="faq-item" onclick="toggleAnswer(20)">
+                <span class="question-icon">?</span>
+                <span class="question-text">Quais são as suculentas mais indicadas para interiores com pouca luz?</span>
+                <div class="answer" id="answer20">
+                   Suculentas como Sansevierias (espada-de-são-jorge) e Zamioculcas (zamioculca) são adaptáveis a condições de baixa luminosidade.
+                </div>
+                </div>
+         </div>
+         <!--Mais-->
+         
+         <!-- Question End -->
+
+        <!-- Footer -->
+         <footer class="footer">
+            <section id="contato" class="bg-light">
+                <div class="container">
+                    <h2 class="text-center mb-4">Contato</h2>
+                    <p class="text-down mb-4">Agende uma visita e venha conhecer!</p>
+                    <div class="content">
+                        <form id="contact-form" class="form">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="nome">Nome</label>
+                                    <input type="text" class="form-control" id="nome" placeholder="Seu nome">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="data-agendamento">Escolha uma data:</label>
+                                    <input type="date" class="form-control" id="data-agendamento" placeholder="Selecione uma data">
+                                </div>                                
+                            </div>
+                            <div class="form-group">
+                                <label for="mensagem">Gostaria de enviar alguma mensagem?</label>
+                                <textarea class="form-control" id="mensagem" rows="4" placeholder="Sua mensagem"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                        </form>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.1250899629195!2d-49.219564585024!3d-25.5249389837404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce49106b4561d%3A0x37f2426215fa287f!2sS%C3%A3o%20Jos%C3%A9%20dos%20Pinhais%2C%20State%20of%20Paran%C3%A1!5e0!3m2!1sen!2sbr!4v1626091620610!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <p><strong>Telefone:</strong> (xx) xxxx-xxxx</p>
+                        <p><strong>Email:</strong> contato@floricultura.com</p>
+                        <p><strong>Endereço:</strong> Rua das Flores, 123, Cidade, Estado</p>
+                    </div>
+                </div>
+            </section>
+        
+            <div class="container text-center py-4">
+                <p>&copy; 2024 Floricultura Suculentas. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+        <!-- footer end -->
+      
+         <script>
+            function toggleAnswer(id) {
+               const answer = document.getElementById(`answer${id}`);
+               answer.classList.toggle('active');
+            }
+         </script>
+</body>
+</html>

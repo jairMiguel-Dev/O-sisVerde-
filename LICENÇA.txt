@@ -1,0 +1,39 @@
+Licença de Uso para Oasis Verde
+
+Este é um contrato legal entre você (doravante referido como "Usuário") e _CodeZone_ (doravante referido como "Licenciante") para o uso do Oasis Verde (doravante referido como "Projeto").
+
+1. Concessão de Licença
+
+1.1. Licença de Uso: O Licenciante concede ao Usuário uma licença não exclusiva, intransferível e revogável para utilizar o Projeto de acordo com os termos e condições estabelecidos neste documento.
+
+1.2. Finalidade: Esta licença permite ao Usuário [descrição da finalidade principal do Projeto, por exemplo, "utilizar, modificar e distribuir o software", "utilizar as imagens em projetos comerciais", etc.].
+
+2. Restrições de Uso
+
+2.1. Restrições: O Usuário concorda em não:
+
+a - Copiar, modificar ou distribuir o Projeto além dos termos especificados nesta licença.
+
+b - Utilizar o Projeto de maneira que viole as leis aplicáveis ou infrinja direitos de terceiros.
+
+c - Remover ou alterar qualquer aviso de direitos autorais, marca registrada ou outra notificação de propriedade do Projeto.
+
+3. Propriedade Intelectual
+
+3.1. Direitos Autorais: Todos os direitos autorais e outros direitos de propriedade intelectual sobre o Projeto são e continuarão sendo de propriedade exclusiva do Licenciante.
+
+4. Isenção de Garantias
+
+4.1. Sem Garantias: O Projeto é fornecido "no estado em que se encontra", sem garantias de qualquer tipo, expressas ou implícitas. O Licenciante não garante a adequação do Projeto para qualquer finalidade específica.
+
+5. Limitação de Responsabilidade
+
+5.1. Limitação: Em nenhuma circunstância o Licenciante será responsável por quaisquer danos diretos, indiretos, incidentais, especiais, consequenciais ou punitivos decorrentes do uso ou impossibilidade de uso do Projeto.
+
+6. Termos Gerais
+
+6.1. Modificações: O Licenciante reserva-se o direito de modificar os termos desta licença a qualquer momento, mediante aviso prévio.
+
+7. Aceitação da Licença
+
+7.1. Aceitação: Ao utilizar o Projeto, o Usuário indica que leu, entendeu e concorda em ficar vinculado aos termos e condições desta licença.
